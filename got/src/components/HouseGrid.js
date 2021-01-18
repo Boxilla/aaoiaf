@@ -18,7 +18,6 @@ export const HouseGrid = ({category}) => {
 
     return (
         <div>
-            <h3>{category}</h3>
                 {
                     houses.map( house => (
                         <HouseGridItem 

@@ -4,7 +4,7 @@ import { HouseGridItem } from './HouseGridItem';
 
 
 
-export const HouseGrid = ({category}) => {
+export const HouseGrid = () => {
 
 
     const [houses, sethouses] = useState([]);

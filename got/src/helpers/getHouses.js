@@ -8,10 +8,10 @@ export const getHouses = async() => {
     const houses = data.map( house => {
         return{
             id: house.url,
-            name: house.name,
-            region: house.region,
-            word: house.words,
-            currentLord: house.currentLord
+            name: house.name?house.name:'Desconocido',
+            region: house.region?house.region:'Desconocido',
+            word: house.words?house.words:'Desconocido',
+            currentLord: house.currentLord?house.currentLord:'Desconocido'
         }
     });
 

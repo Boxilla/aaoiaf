@@ -1,5 +1,7 @@
 
+//helper que hace fetch sobre un personaje dado una url
 
+//Las linea comentadas en el return estan asi porque no alcance a implemntear los helpers para esos atributos.
 
 export const getCharacters = async( character) => {
 

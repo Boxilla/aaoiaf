@@ -3,9 +3,11 @@ import { HouseGrid } from './components/HouseGrid';
 
 export const GoTApp = () => {
 
-    
+    //url de donde se obtienen los datos a mostrat en la pagina.
     const [url, seturl] = useState("https://www.anapioficeandfire.com/api/houses?page=15&pageSize=10")
 
+
+    //Handlers para los botones que muestran otra "página" con información de las casas.
     const handleInicio = () => {
         seturl(`${url} : rel="first"`)
     }
@@ -20,19 +22,16 @@ export const GoTApp = () => {
     }
 
 
-    console.log('url' , url)
     return (
         <>
             <h2> GoT APP </h2> 
             <hr/>
 
-            <ol>
                 {
                    <HouseGrid
                         url={url}
                     />                
                 }       
-            </ol>
 
             <div className='buttons'>
                 <button onClick={() => handleInicio()}> Inicio </button>

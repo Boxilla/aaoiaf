@@ -1,4 +1,5 @@
 
+//Helper que hace un fetch para obtener información de las casas.
 
 export const getHouses = async( direccion ) => {
     const url = direccion;

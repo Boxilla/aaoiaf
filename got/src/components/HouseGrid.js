@@ -4,17 +4,13 @@ import { HouseGridItem } from './HouseGridItem';
 
 
 
-export const HouseGrid = () => {
-
+export const HouseGrid = ({url})  => {
 
     const [houses, sethouses] = useState([]);
 
-    useEffect( () =>{
-        getHouses()
-            .then( sethouses )
-    }, [])
+    getHouses(url)
+        .then( sethouses )
 
-    
 
     return (
         <div>
@@ -22,7 +18,7 @@ export const HouseGrid = () => {
                     houses.map( house => (
                         <HouseGridItem 
                             key={ house.name }
-                            { ...house}
+                            {...house}
                         />
                     ))
                 }
